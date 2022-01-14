@@ -1,0 +1,142 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar at the bottom of your screen
+    "height": 24, // Waybar height
+    "width": 1366, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["custom/menu", "sway/workspaces", "sway/mode"],
+    "modules-center": [""],
+    "modules-right": ["pulseaudio", "clock#2", "cpu", "memory", "tray", "clock#1"],
+    // Modules configuration
+     "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{icon}",
+         "format-icons": {
+             "1": "Files",
+             "2": "Term",
+             "3": "Edit",
+             "4": "Music",
+             "5": "Web",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+     },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window": {
+        "format": "  {}"
+    },
+    "tray": {
+	//"icon-size": 21,
+        "spacing": 10
+    },
+    "clock#1": {
+        "tooltip-format": "{:%Y-%m-%d | %H:%M}"
+    },
+	"clock#2": {
+		"format": "{:%d-%m-%Y}"
+	},
+    "cpu": {
+        "format": "Cpu : {usage}%"
+    },
+    "memory": {
+        "format": "Mem : {}%",
+	"on-click": "termite -e htop"
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["Vol :", "Vol :"]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/mpd": {
+        "format": "♪ {}",
+        "interval": 1,
+        //"max-length": 15,
+        "exec": "echo $(mpc current) – $(mpc status | awk '{print $3}' | sed -n 2p)",
+        "exec-if": "pgrep mpd",
+        "on-click-right": "mpc toggle",
+        "on-click": "termite -e ncmpcpp"
+    },
+	"custom/arrow1": {
+		"format": "",
+	        "tooltip": false
+	},
+	"custom/arrow3": {
+		"format": "",
+                "tooltip": false
+	},
+	"custom/arrow4": {
+		"format": "",
+	        "tooltip": false
+	},
+	"custom/arrow5": {
+		"format": "",
+                "tooltip": false
+	},
+	"custom/arrow6": {
+		"format": "",
+	        "tooltip": false
+	},
+	"custom/arrow7": {
+		"format": "",
+	        "tooltip": false
+	},
+	"custom/arrow8": {
+		"format": " ",
+	        "tooltip": false
+	},
+	"custom/arrow9": {
+		"format": "",
+	        "tooltip": false
+	},
+	"custom/arrow10": {
+		"format": "",
+	        "tooltip": false
+	},
+	"custom/arrow11": {
+		"format": "",
+	        "tooltip": false
+	},
+	"custom/arrow2": {
+		"format": "",
+	        "tooltip": false
+	},
+    "custom/lock": {
+        "format": " ",
+        "tooltip": false,
+        "on-click-left": "swaylock -C ~/.config/nixpkgs/roles/radon/recipes/swaylock/lock.conf"
+    },
+    "custom/menu": {
+        "format": " 﩯 ",
+        "tooltip": false,
+        "on-click": "wofi --show drun"
+    },
+    "idle_inhibitor": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    }
+}

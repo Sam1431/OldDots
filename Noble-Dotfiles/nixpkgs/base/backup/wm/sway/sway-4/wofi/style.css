@@ -1,0 +1,89 @@
+
+* {
+/* background-color: #000000;
+*/
+background-color: #1b1d1f;
+}
+
+#entry {
+border-radius: 0px;
+padding: 5px;
+margin: 7px 4px 0px 7px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#entry:selected {
+background-color: #545a5c;
+color: #1d2021;
+}
+
+#entry:selected>* {
+border: 7px;
+background-color: @darkish;
+color: #1d2021;
+}
+ 
+#text:selected {
+color: #c5d1eb;
+}
+ 
+#window {
+background-color: transparent;
+font-family: Iosevka;
+font-size:14px;
+}
+
+#input {
+border: none;
+background-color: #2b2f30;
+color: #abb2bf;
+border: 0px solid #abb2bf;
+border-radius: 0px;
+margin-bottom: 5px;
+margin-top: 5px;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+#input>* {
+background-color: @darkish;
+}
+
+#inner-box {
+margin-right: 0px;
+margin-left: 0px;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+#outer-box {
+/* background-color: #1d2021;
+*/
+border: 0px solid #1b1d1f;
+
+border-top: 1px solid #ebcb8b;
+border-bottom: 1px solid #a3be8c;
+border-left: 1px solid #b48ead;
+border-right: 1px solid #d08770; 
+
+
+border-radius: 0px;
+padding: 1px;
+}
+
+#scroll {
+}
+
+#text {
+background-color: transparent;
+color: #abb2bf;
+} 
+
+#img {
+  background-color: transparent;
+  margin-right: 10px;
+}

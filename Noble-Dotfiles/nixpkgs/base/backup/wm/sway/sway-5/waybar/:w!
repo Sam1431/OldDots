@@ -1,0 +1,158 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "MesloLGL Nerd Font Mono", "Font Awesome 5 Brands", "Font Awesome 5 Pro Solid", Dejavu Sans Mono for Powerline;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+	background-color: #141617;
+	color: #c5d1eb;
+	border-bottom: 20px rgba(0, 0, 0, 0.1);
+
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button {
+    padding: 0 5px;
+    background: #141617;
+    color: white;
+    border-bottom: 0px solid #1d2021;
+}
+
+#workspaces button.focused {
+    color: #b5bd68;
+    border-bottom: 0px solid #c5c8c6;
+}
+
+#mode {
+	background: #202324;
+	color: #c4c8c5
+}
+
+
+
+#clock.1, #clock.2, #battery, #cpu, #memory, #backlight, #network, #pulseaudio, #custom-mpd, #tray, #mode, #idle_inhibitor {
+    padding: 0 10px;
+    margin: 0 0px;
+}
+
+#clock.1 {
+    background-color: transparent;
+    font-size: 13px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#cpu {
+    background: #202324;
+    color: #b294bb;
+}
+
+#memory {
+    background: #141617;
+    color: #8abeb7;
+}
+
+#clock.2 {
+    background: #141617;
+    color: #f0c674;
+}
+
+#network.disconnected {
+    background: transparent;
+}
+
+#pulseaudio {
+    background: #202324;
+    color: #b5bd68;
+}
+
+#pulseaudio.muted {
+    background: #90b1b1;
+    color: #b5bd68;
+}
+
+#custom-mpd {
+    background: transparent;
+}
+
+#tray {
+    background-color: #949494;
+}
+
+#idle_inhibitor { 
+	background: #141617;
+	font-size: 24px
+}
+#custom-lock {
+	font-size: 20px;
+	background: #141617
+}
+#custom-arrow1 {
+	font-size: 24px;
+	color: #202324;
+	background: #141617
+}
+#custom-arrow2 {
+	font-size: 24px;
+	color: #202324;
+	background: #141617
+}
+#custom-arrow3 {
+	font-size: 24px;
+	background: #141617;
+	color: #202324
+}
+#custom-arrow4 {
+	font-size: 24px;
+	color: #141617;
+	background: #202324
+}
+#custom-arrow5 {
+	font-size: 24px;
+	color: #202324;
+	background: transparent;
+}
+#custom-arrow6 {
+	font-size: 24px;
+	color: #141617;
+	background: #202324;
+}
+#custom-arrow7 {
+	font-size: 24px;
+	color: #141617;
+	background: #202324;
+}
+#custom-arrow8 {
+	font-size: 24px;
+	background: #141617;
+	color: #363a41;
+}
+#custom-arrow9 {
+	font-size: 24px;
+	background: #202324;
+	color: #141617
+}
+#custom-arrow10 {
+	font-size: 24px;  
+	color: #202324;
+	background: #141617
+}
+#custom-arrow11 {
+	font-size: 24px;  
+	background: #202324;
+	color: #141617
+}
+#custom-menu {
+	font-size: 18px;  
+	color: #f8f8f2;
+	background: #141617
+}
+
